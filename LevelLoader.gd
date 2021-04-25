@@ -33,7 +33,6 @@ func load_level_from_image(image: Image, y_offset: int):
 		tile_map.set_cell(14, j + y_offset, 0)
 		tile_map.set_cell(15, j + y_offset, 0)
 		for i in range(width):
-			print(i, ' - ',j)
 			var color = image.get_pixel(i, j)
 			match color:
 				Color.black:

@@ -5,7 +5,6 @@ func _ready():
 	Events.connect("restart_game", self, "restart_game")
 	Events.connect("swap_color", self, "swap_color")
 	
-	Events.emit_signal("swap_color", Color.red, Color.blue, Color.green)
 	
 func restart_game() -> void:
 	get_tree().reload_current_scene()
