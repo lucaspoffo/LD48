@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/teste.png-64fc36710986d49c314bfd786304daf0.image"
+
+[deps]
+
+source_file="res://LevelsTemplate/teste.png"
+dest_files=[ "res://.import/teste.png-64fc36710986d49c314bfd786304daf0.image" ]
+
+[params]
+

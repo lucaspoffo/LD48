@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/level_1_slimes.png-ec90b140b7dab164eff7f5e81bb10fe6.image"
+
+[deps]
+
+source_file="res://LevelsTemplate/level_1_slimes.png"
+dest_files=[ "res://.import/level_1_slimes.png-ec90b140b7dab164eff7f5e81bb10fe6.image" ]
+
+[params]
+
