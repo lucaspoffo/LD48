@@ -76,7 +76,7 @@ animations = [ {
 [sub_resource type="Animation" id=17]
 
 [node name="Slime" type="KinematicBody2D"]
-collision_layer = 4
+collision_layer = 8
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -95,8 +95,8 @@ playing = true
 "hittable",
 ]]
 position = Vector2( 0.749153, -1.49831 )
-collision_layer = 8
-collision_mask = 2
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -1.12373, -3.62097 )

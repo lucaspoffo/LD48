@@ -3,19 +3,6 @@ extends Node2D
 var target
 var projectile_scene := preload("res://Enemies/Projectile.tscn")
 
-func _ready():
-	find_wall()
-
-func find_wall() -> void:
-	for i in range(4):
-		var rot = 90 * i
-		$WallCast.rotation_degrees = rot
-		$WallCast.force_raycast_update()
-		if $WallCast.is_colliding():
-			rotation_degrees = rot
-			global_position = $WallCast.get_collision_point()
-			return
-
 enum States {
 	IDLE,
 	DEAD,
