@@ -11,7 +11,7 @@ enum States {
 	AIR,
 }
 
-export var max_speed := Vector2(120.0, 400.0)
+export var max_speed := Vector2(120.0, 340.0)
 export var jump_impulse := 300.0
 export var move_speed := 170.0
 export var air_speed := 170.0
@@ -73,9 +73,13 @@ func _physics_process(delta: float) -> void:
 			if is_on_floor():
 				change_state(States.MOVE)
 		States.DASH:
-			move_and_slide(velocity, Vector2.UP)
-			if is_on_floor():
-				change_state(States.MOVE)
+			var collision = move_and_collide(velocity * delta)
+			if collision:
+				if collision.collider.is_in_group("hittable"):
+					print("Collider: ", collision.collider.is_in_group("hittable"))
+					dash_collision(collision.collider)
+				else:
+					change_state(States.MOVE)
 		States.DEAD:
 			velocity.y += gravity * delta
 			velocity.x *= .9
@@ -139,23 +143,33 @@ func exit_state(state):
 
 
 func _on_DashDuration_timeout():
-	print("dash timeout")
 	change_state(States.AIR)
 
 func _on_Area2D_area_entered(area: Area2D):
 	match current_state:
 		States.DASH:
 			if area.is_in_group("hittable"):
-				current_air_impulse = Vector2(0, -dash_hit_velocity)
-				$DashCooldown.stop()
-				if area.owner.has_method("hit"):
-					area.owner.hit()
-				change_state(States.AIR)
+				dash_collision(area)
 		States.AIR, States.MOVE, States.IDLE:
-			if area.is_in_group("enemy") and $InvulnerableTimer.time_left == 0:
+			if area.is_in_group("enemy") and $InvulnerableTimer.time_left == 0 and area.owner.is_alive():
 				take_hit(area)
 
+func dash_collision(target) -> void:
+	for overlap in $DashArea.get_overlapping_bodies():
+		if overlap != target and overlap.is_in_group("hittable") and overlap.owner.has_method("hit"):
+			overlap.owner.hit()
+	for overlap in $DashArea.get_overlapping_areas():
+		if overlap != target and overlap.is_in_group("hittable") and overlap.owner.has_method("hit"):
+			overlap.owner.hit()
+	current_air_impulse = Vector2(0, -dash_hit_velocity)
+	$DashCooldown.stop()
+	if target.owner.has_method("hit"):
+		target.owner.hit()
+	change_state(States.AIR)
+
 func take_hit(area: Area2D):
+	if !$InvulnerableTimer.is_stopped():
+		return
 	$InvulnerableTimer.start()
 	$Blinking.play("blinking")
 	current_air_impulse = area.global_position.direction_to(global_position) * enemy_hit_impulse

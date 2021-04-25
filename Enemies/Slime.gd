@@ -46,3 +46,6 @@ func _on_AnimatedSprite_animation_finished():
 func _on_StopTimer_timeout():
 	if current_state != States.DEAD:
 		current_state = States.MOVE
+
+func is_alive() -> bool:
+	return current_state != States.DEAD

@@ -41,7 +41,6 @@ func _exit_tree():
 	pass
 
 func hit() -> void:
-	print("Hitt flower")
 	$Area2D/CollisionShape2D.queue_free()
 	current_state = States.DEAD
 	$AnimatedSprite.play("death")
@@ -68,3 +67,6 @@ func _on_AggroRange_area_entered(area):
 func _on_AggroRange_area_exited(area):
 	if area == target:
 		target = null
+
+func is_alive() -> bool:
+	return current_state != States.DEAD
