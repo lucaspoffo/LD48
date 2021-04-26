@@ -41,6 +41,7 @@ func hit() -> void:
 
 func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == "death":
+		Events.emit_signal("enemy_killed", global_position)
 		queue_free()
 
 func _on_StopTimer_timeout():

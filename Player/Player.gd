@@ -35,7 +35,13 @@ var velocity : = Vector2.ZERO
 
 func _ready():
 	current_health = max_health
+	Events.connect("health_drop_collected", self, "on_health_collected")
 	Events.emit_signal("player_health_changed", current_health, max_health)
+
+func on_health_collected():
+	if current_health < max_health && current_state != States.DEAD:
+		current_health += 1
+		Events.emit_signal("player_health_changed", current_health, max_health)
 
 func get_horizontal_direction() -> float:
 	return Input.get_action_strength("move_right") - Input.get_action_strength("move_left")

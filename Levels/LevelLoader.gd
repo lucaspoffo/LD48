@@ -21,7 +21,7 @@ func _ready():
 	spawn_depth(depth_1_templates)
 	spawn_depth(depth_1_templates)
 	spawn_depth(depth_1_templates)
-	spawn_player()
+	# spawn_player()
 
 func spawn_depth(templates: Array) -> void:
 	for i in range(GameManager.levels_per_depth):

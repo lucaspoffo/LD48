@@ -5,4 +5,5 @@ func hit() -> void:
 
 func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == "death":
+		Events.emit_signal("mineral_destroyed")
 		queue_free()
