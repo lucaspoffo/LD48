@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Levels/LevelLoader.gd" type="Script" id=1]
 [ext_resource path="res://Levels/Depth_1/depth_1_1.tscn" type="PackedScene" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://Enemies/Spike.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Misc/Box.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Misc/Mineral.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Misc/HealthDrop.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=9]
 
 [node name="LevelLoader" type="Node2D"]
@@ -55,6 +54,3 @@ position = Vector2( 168.628, -42.0923 )
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
 position = Vector2( 44.3372, -6.17354 )
-
-[node name="HealthDrop" parent="." instance=ExtResource( 8 )]
-position = Vector2( 131.047, -69.0314 )
