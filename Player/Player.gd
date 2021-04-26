@@ -149,6 +149,8 @@ func _on_Area2D_area_entered(area: Area2D):
 		States.DASH:
 			if area.is_in_group("hittable"):
 				dash_collision(area)
+			elif area.is_in_group("spike") and $InvulnerableTimer.time_left == 0:
+				take_hit(area)
 		States.AIR, States.MOVE, States.IDLE:
 			if area.is_in_group("enemy") and $InvulnerableTimer.time_left == 0 and area.owner.is_alive():
 				take_hit(area)

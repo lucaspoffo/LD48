@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Levels/LevelLoader.gd" type="Script" id=1]
 [ext_resource path="res://Levels/Depth_1/depth_1_1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://TileSet.tres" type="TileSet" id=3]
 [ext_resource path="res://Levels/Depth_1/depth_1_2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Enemies/Spike.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Misc/Box.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Misc/Mineral.tscn" type="PackedScene" id=7]
 
@@ -31,7 +32,7 @@ position = Vector2( 84, 0 )
 position = Vector2( 96, 0 )
 
 [node name="Mineral" parent="." instance=ExtResource( 7 )]
-position = Vector2( 156, 0 )
+position = Vector2( 129.903, -0.841843 )
 
 [node name="Mineral2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 12, -24 )
@@ -40,3 +41,12 @@ position = Vector2( 12, -24 )
 position = Vector2( 0, 84 )
 
 [node name="Levels" type="Node2D" parent="."]
+
+[node name="Spike" parent="." instance=ExtResource( 5 )]
+position = Vector2( 172.205, -1.31197 )
+
+[node name="Spike2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 158.454, -1.03136 )
+
+[node name="Mineral3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 168.628, -42.0923 )
