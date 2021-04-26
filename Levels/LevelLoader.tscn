@@ -13,9 +13,6 @@
 script = ExtResource( 1 )
 depth_1_templates = [ ExtResource( 2 ), ExtResource( 4 ) ]
 
-[node name="PlayerSpawn" type="Position2D" parent="."]
-position = Vector2( 36, -12 )
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 12, 12 )

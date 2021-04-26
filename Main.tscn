@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Levels/LevelLoader.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/HealthBar.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Main.gd" type="Script" id=3]
+[ext_resource path="res://UI/DepthBar.tscn" type="PackedScene" id=4]
+[ext_resource path="res://UI/MineralCount.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Animation" id=1]
 tracks/0/type = "value"
@@ -30,6 +32,18 @@ __meta__ = {
 }
 
 [node name="HealthBar" parent="Control" instance=ExtResource( 2 )]
+
+[node name="DepthBar" parent="Control" instance=ExtResource( 4 )]
+margin_left = 281.677
+margin_top = 77.9094
+margin_right = 294.677
+margin_bottom = 251.909
+
+[node name="MineralCount" parent="Control" instance=ExtResource( 5 )]
+margin_left = 278.078
+margin_top = 2.43371
+margin_right = 278.078
+margin_bottom = 2.43372
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
 margin_left = 90.0

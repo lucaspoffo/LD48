@@ -15,7 +15,6 @@ func restart_game():
 
 func entered_new_level():
 	current_level += 1
-	print("NEW LEVEL: ", current_level)
 	if current_level % levels_per_depth == 0:
 		current_depth += 1
 		Events.emit_signal("depth_changed", current_depth)
