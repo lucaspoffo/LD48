@@ -29,39 +29,39 @@ region = Rect2( 130, 0, 26, 26 )
 
 [sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 78, 26, 26 )
+region = Rect2( 0, 26, 26, 26 )
 
 [sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 2 )
-region = Rect2( 26, 78, 26, 26 )
+region = Rect2( 26, 26, 26, 26 )
 
 [sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 2 )
-region = Rect2( 52, 78, 26, 26 )
+region = Rect2( 52, 26, 26, 26 )
 
 [sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 2 )
-region = Rect2( 78, 78, 26, 26 )
+region = Rect2( 0, 78, 26, 26 )
 
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 2 )
-region = Rect2( 104, 78, 26, 26 )
+region = Rect2( 26, 78, 26, 26 )
 
 [sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 2 )
-region = Rect2( 130, 78, 26, 26 )
+region = Rect2( 52, 78, 26, 26 )
 
 [sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 2 )
-region = Rect2( 0, 26, 26, 26 )
+region = Rect2( 78, 78, 26, 26 )
 
 [sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 2 )
-region = Rect2( 26, 26, 26, 26 )
+region = Rect2( 104, 78, 26, 26 )
 
 [sub_resource type="AtlasTexture" id=15]
 atlas = ExtResource( 2 )
-region = Rect2( 52, 26, 26, 26 )
+region = Rect2( 130, 78, 26, 26 )
 
 [sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 2 )
@@ -102,15 +102,15 @@ animations = [ {
 "name": "idle",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
-"loop": true,
-"name": "dash",
-"speed": 20.0
-}, {
-"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
 "name": "walk",
 "speed": 12.0
+}, {
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
+"loop": true,
+"name": "dash",
+"speed": 20.0
 }, {
 "frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
 "loop": true,
@@ -155,6 +155,7 @@ script = ExtResource( 1 )
 position = Vector2( 0.5, -7.75 )
 frames = SubResource( 24 )
 animation = "dash"
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -8,7 +8,6 @@ export(Array, PackedScene) var depth_3_templates
 export(Array, PackedScene) var depth_4_templates
 export(Array, PackedScene) var depth_5_templates
 
-export(int) var levels_per_depth := 5
 onready var next_level_position = $StartLevelPosition.global_position
 
 func spawn_player() -> void:
@@ -25,7 +24,7 @@ func _ready():
 	spawn_player()
 
 func spawn_depth(templates: Array) -> void:
-	for i in range(levels_per_depth):
+	for i in range(GameManager.levels_per_depth):
 		var template = templates[randi() % templates.size()]
 		spawn_level_template(template)
 
