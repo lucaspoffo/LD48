@@ -76,7 +76,6 @@ func _physics_process(delta: float) -> void:
 			var collision = move_and_collide(velocity * delta)
 			if collision:
 				if collision.collider.is_in_group("hittable"):
-					print("Collider: ", collision.collider.is_in_group("hittable"))
 					dash_collision(collision.collider)
 				else:
 					change_state(States.MOVE)

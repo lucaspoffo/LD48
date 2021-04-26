@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://LevelLoader.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Levels/LevelLoader.tscn" type="PackedScene" id=1]
 [ext_resource path="res://HealthBar.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Main.gd" type="Script" id=3]
 
