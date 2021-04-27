@@ -1,0 +1,94 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/PauseMenu.gd" type="Script" id=1]
+
+[node name="PauseMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseOverlay" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.215686, 0.156863, 0.156863, 0.784314 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseOverlay"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -48.0
+margin_right = 48.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Restart2" type="Button" parent="PauseOverlay/VBoxContainer"]
+margin_top = 106.0
+margin_right = 96.0
+margin_bottom = 126.0
+text = "Resume"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Restart" type="Button" parent="PauseOverlay/VBoxContainer"]
+margin_top = 130.0
+margin_right = 96.0
+margin_bottom = 150.0
+text = "Restart"
+flat = true
+
+[node name="Quit" type="Button" parent="PauseOverlay/VBoxContainer"]
+margin_top = 154.0
+margin_right = 96.0
+margin_bottom = 174.0
+text = "Quit"
+flat = true
+
+[node name="HSlider" type="HSlider" parent="PauseOverlay/VBoxContainer"]
+margin_top = 178.0
+margin_right = 96.0
+margin_bottom = 194.0
+step = 10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PauseOverlay/VBoxContainer/HSlider"]
+margin_left = -27.75
+margin_top = 1.0
+margin_right = -3.75
+margin_bottom = 15.0
+text = "SFX"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSlider2" type="HSlider" parent="PauseOverlay/VBoxContainer"]
+margin_top = 198.0
+margin_right = 96.0
+margin_bottom = 214.0
+step = 10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PauseOverlay/VBoxContainer/HSlider2"]
+margin_left = -41.25
+margin_top = 1.25
+margin_right = -3.25
+margin_bottom = 15.25
+text = "Music"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="PauseOverlay/VBoxContainer/Restart" to="." method="_on_Restart_pressed"]

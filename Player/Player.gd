@@ -130,7 +130,7 @@ func enter_state(state):
 				current_air_impulse = Vector2.ZERO
 			$AnimatedSprite.play("air")
 		States.DEAD:
-			pass
+			$AnimatedSprite.play("death")
 
 func exit_state(state):
 	match state:

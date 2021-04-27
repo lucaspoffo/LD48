@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Assets/progress_life.png" type="Texture" id=1]
-[ext_resource path="res://Assets/over_life.png" type="Texture" id=2]
+[ext_resource path="res://Assets/progress_depth.png" type="Texture" id=1]
+[ext_resource path="res://Assets/over_depth.png" type="Texture" id=2]
 [ext_resource path="res://UI/DepthBar.gd" type="Script" id=3]
 
 [node name="DepthBar" type="TextureProgress"]

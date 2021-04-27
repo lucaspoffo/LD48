@@ -2,7 +2,7 @@ extends Node
 
 var current_level = 0
 var current_depth = 0
-var levels_per_depth = 3
+var levels_per_depth = 4
 
 func _ready():
 	randomize()

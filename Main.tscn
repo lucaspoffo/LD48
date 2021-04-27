@@ -22,28 +22,7 @@ tracks/0/keys = {
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )
-depth_color = [ Color( 1, 0, 0, 1 ), Color( 0, 1, 0.227451, 1 ), Color( 0, 0.12549, 0.792157, 1 ), Color( 1, 0, 0.843137, 1 ), Color( 0, 1, 1, 1 ) ]
-
-[node name="Control" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="HealthBar" parent="Control" instance=ExtResource( 2 )]
-
-[node name="DepthBar" parent="Control" instance=ExtResource( 4 )]
-margin_left = 281.677
-margin_top = 77.9094
-margin_right = 294.677
-margin_bottom = 251.909
-
-[node name="MineralCount" parent="Control" instance=ExtResource( 5 )]
-margin_left = 278.078
-margin_top = 2.43371
-margin_right = 278.078
-margin_bottom = 2.43372
+depth_color = [ Color( 0.690196, 0.686275, 1, 1 ), Color( 0.686275, 1, 0.713726, 1 ), Color( 0.937255, 1, 0.686275, 1 ), Color( 1, 0.686275, 0.686275, 1 ), Color( 1, 0.686275, 0.988235, 1 ) ]
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
 margin_left = 90.0
@@ -66,3 +45,24 @@ audio_listener_enable_2d = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/swap_color = SubResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthBar" parent="Control" instance=ExtResource( 2 )]
+
+[node name="DepthBar" parent="Control" instance=ExtResource( 4 )]
+margin_left = 281.677
+margin_top = 77.9094
+margin_right = 294.677
+margin_bottom = 251.909
+
+[node name="MineralCount" parent="Control" instance=ExtResource( 5 )]
+margin_left = 278.078
+margin_top = 2.43371
+margin_right = 278.078
+margin_bottom = 2.43372
