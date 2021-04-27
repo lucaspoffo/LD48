@@ -24,8 +24,8 @@ export var enemy_hit_impulse := 350.0
 export var move_acceleration := Vector2(10000, 3000.0)
 export var air_acceleration := Vector2(1500, 3000.0)
 
-var max_health := 3
-var current_health := 3
+var max_health := 5
+var current_health := 5
 
 var current_state = States.AIR
 var horizontal_direction : = 0.0

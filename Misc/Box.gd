@@ -2,7 +2,7 @@ extends Node2D
 
 
 var health_drop = preload("res://Misc/HealthDrop.tscn")
-var health_drop_change = 0.01
+var health_drop_change = 0.04
 
 func hit() -> void:
 	$AnimatedSprite.play("death")

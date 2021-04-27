@@ -6,7 +6,7 @@ var health_drop = preload("res://Misc/HealthDrop.tscn")
 
 onready var level_loader = $ViewportContainer/Viewport/LevelLoader 
 
-var enemy_health_drop_change = 0.05
+var enemy_health_drop_change = 0.07
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

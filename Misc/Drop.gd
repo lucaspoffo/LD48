@@ -21,7 +21,6 @@ func _process(delta):
 	
 	velocity += acceleration * player_direction * delta
 	velocity = velocity.clamped(max_speed)
-	print(velocity)
 	owner.global_position += velocity * delta
 	
 func _on_Area2D_area_entered(area):
